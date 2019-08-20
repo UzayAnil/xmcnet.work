@@ -44,6 +44,9 @@ if ( ! function_exists( 'airi_setup' ) ) :
 
 		add_image_size( 'airi-720', 720 );
 		add_image_size( 'airi-360-360', 360, 360, true );
+		add_image_size( 'airi-850-485', 850, 485, true );
+		add_image_size( 'airi-390-280', 390, 280, true );
+		add_image_size( 'airi-969-485', 969, 485, true );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
@@ -82,6 +85,7 @@ if ( ! function_exists( 'airi_setup' ) ) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
+
 	}
 endif;
 add_action( 'after_setup_theme', 'airi_setup' );
@@ -159,7 +163,7 @@ function airi_scripts() {
 
 	wp_enqueue_script( 'airi-scripts', get_template_directory_uri() . '/js/vendor/scripts.js', array( 'jquery' ), '20180223', true );
 
-	wp_enqueue_script( 'airi-main', get_template_directory_uri() . '/js/custom/custom.min.js', array( 'jquery' ), '20180223', true );	
+	wp_enqueue_script( 'airi-main', get_template_directory_uri() . '/js/custom/custom.min.js', array( 'jquery' ), '20181017', true );	
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -183,6 +187,19 @@ function airi_enqueue_bootstrap() {
 	wp_enqueue_style( 'airi-bootstrap', get_template_directory_uri() . '/css/bootstrap/bootstrap.min.css', array(), true );
 }
 add_action( 'wp_enqueue_scripts', 'airi_enqueue_bootstrap', 9 );
+
+/**
+ * Gutenberg
+ */
+function airi_editor_styles() {
+	
+	wp_enqueue_style( 'airi-block-editor-styles', get_theme_file_uri( '/editor-styles.css' ), '', '1.0', 'all' );
+	
+	if ( !class_exists( 'Kirki_Fonts' ) ) {
+		wp_enqueue_style( 'airi-fonts', '//fonts.googleapis.com/css?family=Work+Sans:400,500,600', array(), null );
+	}
+}
+add_action( 'enqueue_block_editor_assets', 'airi_editor_styles' );
 
 /**
  * Disable Elementor globals on theme activation
@@ -337,3 +354,13 @@ function airi_register_required_plugins() {
 	tgmpa( $plugins, $config );
 }
 add_action( 'tgmpa_register', 'airi_register_required_plugins' );
+
+/**
+ * Upsell
+ */
+require get_template_directory() . '/inc/customizer/upsell/class-customize.php';
+
+/**
+ * Onboarding
+ */
+require get_template_directory() . '/inc/onboarding/class-airi-onboarding.php';

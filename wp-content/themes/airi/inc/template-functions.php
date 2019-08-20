@@ -122,7 +122,13 @@ if ( !function_exists( 'airi_blog_layout' ) ) {
 		if ( $layout == 'layout-grid' || $layout == 'layout-masonry' ) {
 			$cols 		= 'col-md-12';
 			$sidebar	= false;
-		} else {
+		}
+		elseif ( $layout == 'layout-list-2' || $layout == 'layout-two-columns' )
+		{
+			$cols 		= 'col-lg-9';
+			$sidebar 	= true;
+		}
+		else {
 			$cols 		= 'col-lg-8';
 			$sidebar 	= true;
 		}	
@@ -274,7 +280,7 @@ function airi_footer_credits() {
 			<span class="sep"> | </span>
 			<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %2$s by %1$s.', 'airi' ), 'aThemes', '<a href="https://athemes.com/theme/airi">Airi</a>' );
+				printf( esc_html__( 'Theme: %2$s by %1$s.', 'airi' ), 'aThemes', '<a href="https://athemes.com/theme/airi" rel="nofollow">Airi</a>' );
 			?>
 		<?php else : ?>
 			<?php echo wp_kses_post( $credits ); ?>
@@ -324,15 +330,19 @@ if ( !function_exists( 'airi_site_branding' ) ) {
 
 if ( ! function_exists( 'airi_header_cart_search' ) ) {
 	/**
-	 * Display Header cart and search ico.
+	 * Display Header cart and search icon.
 	 *
 	 */
 	function airi_header_cart_search() {
+		
+		$disable_search = get_theme_mod( 'disable_header_search' );
 		?>
 		<ul class="header-search-cart">
+			<?php if ( !$disable_search ) : ?>
 			<li class="header-search">
 				<div class="header-search-toggle"><a><i class="fa fa-search"></i></a></div>
 			</li>
+			<?php endif; ?>
 			<li class="header-cart-link">
 				<?php if ( function_exists( 'airi_woocommerce_cart_link' ) ) {
 					airi_woocommerce_cart_link();

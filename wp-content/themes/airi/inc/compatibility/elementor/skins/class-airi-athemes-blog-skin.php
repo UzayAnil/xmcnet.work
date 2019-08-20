@@ -13,7 +13,6 @@ function airi_register_athemes_blog_skin() {
 		public function __construct( Elementor\Widget_Base $parent ) {
 			parent::__construct( $parent );
 			add_action( 'elementor/element/athemes-blog/section_style_content/after_section_start', [ $this, 'register_controls' ] );
-			add_filter( 'elementor/widget/print_template', array( $this, 'skin_print_template' ), 10, 2 );
 		}
      
 		public function get_id() {
@@ -107,7 +106,7 @@ function airi_register_athemes_blog_skin() {
 										<?php the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' ); ?>
 										<?php airi_posted_on(); ?>
 										<?php echo wp_trim_words( get_the_content(), 12 ); ?>
-										<a class="read-more" href="<?php the_permalink(); ?> title="<?php the_title_attribute(); ?>"><?php esc_html_e( 'Read more >>', 'airi' ); ?></a>
+										<a class="read-more" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php esc_html_e( 'Read more >>', 'airi' ); ?></a>
 									</div>	
 								</div>				
 							</div>
@@ -124,7 +123,7 @@ function airi_register_athemes_blog_skin() {
 									<?php the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' ); ?>
 									<?php airi_posted_on(); ?>
 									<?php echo wp_trim_words( get_the_content(), 12 ); ?>
-									<a class="read-more" href="<?php the_permalink(); ?> title="<?php the_title_attribute(); ?>"><?php esc_html_e( 'Read more >>', 'airi' ); ?></a>
+									<a class="read-more" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php esc_html_e( 'Read more >>', 'airi' ); ?></a>
 								</div>	
 							</div>				
 						</div>
