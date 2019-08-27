@@ -1,37 +1,17 @@
-## Welcome to GitHub Pages
+## About XMC
 
-You can use the [editor on GitHub](https://github.com/xmcnetwork/xmcnet.work/edit/gh-pages/README.md) to maintain and preview the content for your website in Markdown files.
+XMC as a server began as Moonlight SMP all the way back in April of 2019. As a network, however, we began around March of that year. It was this month that we introduced a second server to our name.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+We have since expanded to have a staff team of four great people, and three great servers. We have a favorite staff member, guess who it is!
 
-### Markdown
+### Join the Servers
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+We proudly host three servers. You never have to download anything in order to join.
 
-```markdown
-Syntax highlighted code block
+- XMC Vanilla - Whitelisted, running Fabric. Apply on our Discord at [apply.xmcnet.work.](http://apply.xmcnet.work)
+- XMC Survival - Open to the public. Runs Paper. Join the server at **play.xmcnet.work**, and join the discord at [join.xmcnet.work](http://join.xmcnet.work).
+- XMC Technical - Invite only. As per the name, is focused on the technical aspects of Minecraft. Farming is big here. Already a part of the server? Join it at **tech.xmcnet.work**.
 
-# Header 1
-## Header 2
-### Header 3
+### Support Us
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/xmcnetwork/xmcnet.work/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+You can support us through Patreon to get multiple in-game perks! [patreon.com/xmc](https://patreon.com/xmc)
