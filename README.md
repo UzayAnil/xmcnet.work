@@ -15,5 +15,3 @@ We proudly host three servers. You never have to download anything in order to j
 ### Support Us
 
 You can support us through Patreon to get multiple in-game perks! [patreon.com/xmc](https://patreon.com/xmc)
-
-###### That github link at the top totally isn't there just because I don't know how to remove it ;)
